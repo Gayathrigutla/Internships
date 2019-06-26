@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+	$("h2").dblclick(function(){
+		$(this).hide();
+	});
+ 
+	$("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "#ffffff");
+  });
+
+	$("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+
+	$("button").click(function(){
+    $("#div1").animate({left: '250px',
+    opacity: '0.5',
+    height: 'toggle',
+    width: '150px',
+    
+    });
+  });
+
+});
+</script>
+<style> 
+body{
+	background-color: pink;
+}
+h1{
+	color:blue;
+	padding-left: 375px;
+	background-color:red;
+	border:2px solid black;
+	text-shadow: 5px -5px 5px 5px ;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+h4{
+	color:red;
+
+}
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+
+</head>
+<body>
+<h1 class="container-fluid"> Welcome to my Webpage</h1>
+<h4> Hey!!! Wanna see a magic!!! Double click on me :)</h2>
+<h6>If you click on me, I will disappear.</h6>
+
+
+
+<hr>
+Name : <input type="text" name="fullname"><br><br>
+Interest : <input type="text" name="interest"><br><br>
+First Impression of NITK : <input type="text" name="NITK"><br><br>
+First Reaction after seeing your Hostel Room : <input type="text" name="hostel"><br><br>
+First Impression of Mess Food : <input type="text" name="mess"><br><br>
+<hr>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+<hr>
+<button>Start Animation</button>
+<div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
